@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+div.item {
+    height: 200px;
+    background-color: lightgreen;
+    outline: 1px solid black;
+}
+
+.item:nth-last-of-type(2n) {
+    background-color: lightcoral;
+}
+
+[class^='col-sm'] {
+    outline: 1px solid red;
+}

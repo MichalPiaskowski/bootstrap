@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.my-container,
+.my-container-fluid {
+    height: 50vh;
+    background-color: red;
+}
+
+.my-container-fluid {
+    background-color: green;
+}
