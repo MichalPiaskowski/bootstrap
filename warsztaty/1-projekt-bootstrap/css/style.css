@@ -1,5 +1,7 @@
-/* font-family: 'Roboto Slab', serif; */
-/* font-family: 'Montserrat', sans-serif; */
+/* ------------
+    GLOBALS 
+-------------*/
+/* Reset */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,26 +10,36 @@
     color: rgb(119, 119, 119)
 }
 
+/* Global fonts and main color */
 html {
     font-family: 'Roboto Slab', serif;
     color: rgb(119, 119, 119)
 }
 
+/* Deafault section */
 section.section-content {
+    min-height: 90vh;
     padding-top: 100px;
     padding-bottom: 100px;
-    min-height: 90vh;
+    text-align: center;
+
 }
 
+/* Default headings */
 .h1,
 .h2,
-.h3,
-.h4 {
+.h3 {
     width: 100%;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     text-align: center;
     text-transform: uppercase;
     color: rgb(51, 51, 51);
+}
+
+div.title-row {
+    padding: 10px;
+    margin-bottom: 30px;
 }
 
 p.title-caption {
@@ -37,8 +49,80 @@ p.title-caption {
     text-align: center;
 }
 
+
+/* Covering link */
+.cover-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 30px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    background-color: rgb(14, 216, 214);
+    border-color: rgb(14, 216, 214);
+    transition: 0.3s ease-in;
+}
+
+.btn:hover {
+    color: rgb(14, 216, 214);
+    background-color: #fff;
+    border-color: rgb(14, 216, 214);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+/* Icons */
+i.fas {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    color: #fff;
+    font-size: 50px;
+    transition: 0.8s linear;
+}
+
+i.fab {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: 0 4px;
+    font-size: 16px;
+    line-height: 30px;
+    color: #fff;
+    background-color: rgb(51, 51, 51);
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s ease-in;
+}
+
+i.fab:hover {
+    background-color: rgba(14, 216, 214);
+}
+
+
+/* ------------
+    NAVIGATION 
+-------------*/
 nav.navbar {
     width: 100%;
+}
+
+nav.navbar .navbar-brand {
+    color: #fff;
 }
 
 nav.scroll {
@@ -47,10 +131,11 @@ nav.scroll {
 
 #nav .nav-link {
     transition: 0.4s linear;
+    color: #fff;
 }
 
 #nav .nav-link:hover {
-    color: white;
+    color: rgb(51, 51, 51);
 }
 
 div.navbar-collapse {
@@ -58,18 +143,21 @@ div.navbar-collapse {
     text-transform: uppercase;
 }
 
-header.main-header {
+/* ------------
+    HEADER
+-------------*/
+.main-header {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100%;
-    background-image: url(/bootstrap/warsztaty/1-projekt-bootstrap/assets/img/header/pictures_on_the_wall.jpg);
+    background-image: url(../assets/img/header/pictures_on_the_wall.jpg);
     background-size: cover;
     color: rgb(250, 250, 250);
 }
 
-header.main-header:after {
+.main-header::after {
     content: '';
     position: absolute;
     left: 0;
@@ -79,69 +167,65 @@ header.main-header:after {
     background-color: rgba(50, 50, 50, 0.4);
 }
 
-div.content-header-container {
+.content-header-container {
     position: relative;
     z-index: 100;
     text-align: center;
 }
 
-div.content-header-container h2.h2 {
-    color: white;
+.content-header-container .h2 {
+    color: #fff;
     font-size: 30px;
     text-transform: capitalize;
     font-style: italic;
+    font-weight: 400;
 }
 
-div.content-header-container h1.h1 {
-    color: white;
+.content-header-container .h1 {
+    color: #fff;
     font-size: 60px;
     text-transform: uppercase;
     margin-bottom: 30px;
 }
 
 
-/* SERVICES */
-
-div.services-container {
+/* ------------
+    SERVICES 
+-------------*/
+.services-container {
     width: 70%;
 }
 
-div.services-row {
-    margin-top: 30px;
-}
-
-div.service-icon {
+.service-icon {
     position: relative;
     width: 100px;
     height: 100px;
     margin: 10px auto;
-    color: white;
+    color: #fff;
     background-color: rgb(14, 216, 214);
     border: 1px solid rgb(14, 216, 214);
     border-radius: 50%;
     transition: 0.8s linear;
 }
 
-i.fas {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 50px;
-    transition: 0.8s linear;
+.services .h3 {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: capitalize;
 }
 
-/* @TODO ustaw transforma na iconie */
-div.service-icon:hover i.fas {
+.services p {
+    font-size: 12px;
+}
+
+
+.service-icon:hover i.fas {
     color: rgb(14, 216, 214);
-    transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(720deg);
 }
 
-
-div.service-icon:hover {
-    background-color: white;
+.service-icon:hover {
+    background-color: #fff;
 }
 
 .services-row .h3 {
@@ -155,17 +239,12 @@ div.service-icon:hover {
     text-align: center;
 }
 
+
+/* ------------
+    PORTFOLIO 
+-------------*/
 section.portfolio {
     background-color: rgb(247, 247, 247);
-}
-
-.galery a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 100;
 }
 
 .galery-media {
@@ -210,13 +289,13 @@ section.portfolio {
 .galery-details {
     padding: 20px;
     font-size: 10px;
-    text-align: center;
-    background: white;
+    background: #fff;
 }
 
-.galery-title {
+.image-title {
+    text-align: center;
     font-size: 18px;
-    color: black;
+    color: #000;
 }
 
 #image-2 {
@@ -225,4 +304,139 @@ section.portfolio {
 
 #image-3 {
     background-image: url(../assets/img/portfolio/child_with_blue_paint.jpg);
+}
+
+#image-4 {
+    background-image: url(../assets/img/portfolio/chaotic_paint.jpg);
+}
+
+#image-5 {
+    background-image: url(../assets/img/portfolio/house_with_blue_doors.jpg);
+}
+
+#image-6 {
+    background-image: url(../assets/img/portfolio/box_of_cookies.jpg);
+}
+
+
+/* ------------
+    TEAM 
+-------------*/
+
+.team .container {
+    width: 60%;
+}
+
+.team-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-image {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.team-image img {
+    width: 100%;
+    transform: scale(1.1)
+}
+
+.image-title {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* ------------
+    CONTACT
+-------------*/
+.contact {
+    position: relative;
+    background: url(../assets/img/footer/world-map.jpg) no-repeat center center / cover;
+    z-index: 0;
+}
+
+.contact::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.7);
+    z-index: -1;
+}
+
+.contact form {
+    z-index: 1;
+}
+
+
+.contact .h2,
+.contact .title-caption {
+    color: #fff;
+}
+
+.contact input {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.contact textarea {
+    height: 190px;
+    margin-bottom: 20px;
+}
+
+#contact-message:focus {
+    outline-color: grey;
+    outline: none;
+}
+
+.contact input::placeholder,
+#contact-message::placeholder {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #bbb;
+}
+
+/* ------------
+    FOOTER
+-------------*/
+.footer {
+    display: flex;
+    align-items: center;
+    min-height: 10vh;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px auto;
+}
+
+.footer .container {
+    width: 80%;
+}
+
+.copyright {
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.footer-content a {
+    padding: 5px;
+    font-size: 10px;
+    color: rgb(119, 119, 119);
+    text-decoration: none;
+    font-weight: 700;
 }
